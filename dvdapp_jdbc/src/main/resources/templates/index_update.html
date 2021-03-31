@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h2>Java Class - H2K</h2>
+    <form action="#" th:action="@{/updateCustomer}" method="post" th:object="${userInfo}">
+
+            <div class="form-row">
+                <div class="col">
+            <label for="customer_id">Customer Id:</label>
+
+            <input type="text" class="form-control" id="customer_id" placeholder="Enter Customer Id" th:field="*{customer_id}">
+                    </div>
+
+        </div>
+
+        <div class="form-group">
+            <label for="first_name">First Name:</label>
+            <input type="text" class="form-control" id="first_name" placeholder="Enter first name" th:field="*{first_name}">
+        </div>
+        <div class="form-group">
+            <label for="last_name">Last Name:</label>
+            <input type="text" class="form-control" id="last_name" placeholder="Enter last name" th:field="*{last_name}">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" th:field="*{email}">
+        </div>
+        <div class="form-group">
+            <label for="address_id">Address Id:</label>
+            <input type="text" class="form-control" id="address_id" placeholder="Enter Address Id" th:field="*{address_id}">
+        </div>
+
+
+
+
+        <button type="submit" class="btn btn-primary" value="save1">Submit</button>
+        <button type="submit" class="btn btn-primary" value="cancel" th:onclick="|window.location.href='/do-stuff'|">Cancel</button>
+
+
+
+
+    </form>
+
+</div>
+
+
+</body>
+</html>
